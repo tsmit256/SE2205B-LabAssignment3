@@ -38,7 +38,7 @@ public class Assignment3 {
 
                 //if the child node(vertex) hasn't been visited and potential for increase flow
                 if((visitedNodes[FN.opposite(v_i,e).getLabel()] == 0) && (e.flowCap - e.flow > 0)){
-                    parent[FN.opposite(v_i,e).getLabel()] == v_i.getLabel(); //sets the parent of adj node to be v_i
+                    parent[FN.opposite(v_i,e).getLabel()] = v_i.getLabel(); //sets the parent of adj node to be v_i
                     LLQ.enqueue(FN.opposite(v_i,e)); //enqueues adj (child) node
                 }
             } //end of for loop

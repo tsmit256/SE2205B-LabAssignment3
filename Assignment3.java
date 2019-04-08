@@ -58,11 +58,16 @@ public class Assignment3 {
 
             //loop which iterates through all edges in path, starting from end of path
             //Finds the largest amount of flow that can be added to suit requirements of all edge caps
+            currVertex = verticesArray[parent[currVertex.getLabel()]];
             while(parent[currVertex.getLabel()] != -1){ //loop will stop once parent of s is called
+                 
                 e = fN.getEdge(verticesArray[parent[currVertex.getLabel()]],currVertex); //edge between currVertex and parent
                 if(e.flowCap - e.flow < minFlowChange) //update min if flow difference of this edge is smaller
                     minFlowChange = e.flowCap - e.flow;
-            }
+                
+                //next iteration: set currVertex to be the parent of the past currVertex
+                currVertex = verticesArray[parent[currVertex.getLabel()]]; 
+            }//end of while loop
 
             currVertex = verticesArray[t]; //start currVertex at end of path again
             //loop which iterates through all edges in path, starting from end of path

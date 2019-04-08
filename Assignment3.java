@@ -1,3 +1,7 @@
+//COMPLETED WITH PARTNER
+//tsmit256 (250950741) && zmascian (250949836)
+
+
 public class Assignment3 {
     //By declaring parent and verticesArray outside of the individual functions,
     // it allows them to be altered in path search function & also accessed in the max flow function
